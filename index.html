@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>스타트닥터</title>
+    
+    <meta name="author" content="스타트닥터">
+    <meta name="description" content="스타트닥터">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:image" content="../assets/ogimage.png">
+    <meta property="og:description" content="스타트닥터">
+    <meta property="og:title" content="스타트닥터">
+    <meta name="twitter:title" content="스타트닥터">
+
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/member.css">
+
+    <link rel="stylesheet" href="../lib/onepage-scroll.css">
+
+  </head>
+  <body>
+
+
+    
+
+    <div id="estimate">
+    
+      <section>
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+    
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">1 ></span>견적받으실 분야를 선택해주세요.<div class="circle"></div>
+                </div>
+              </div>
+              <div class="row margin_top_m margin_left_l">
+                <div class="col-12 margin_top_s">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="" 
+                            onchange="formtype('form1'); estimateSlideTo(2);">
+                    <label class="form-check-label font_size_l" for="exampleRadios1">
+                      인테리어
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 margin_top_s">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="" 
+                            onchange="formtype('form2'); estimateSlideTo(8);">
+                    <label class="form-check-label font_size_l" for="exampleRadios2">
+                      마케팅
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 margin_top_s">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="" 
+                            onchange="formtype('form3'); estimateSlideTo(12)">
+                    <label class="form-check-label font_size_l" for="exampleRadios3">
+                      홈페이지
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 margin_top_s">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value=""
+                            onchange="formtype('form4'); estimateSlideTo(14)">
+                    <label class="form-check-label font_size_l" for="exampleRadios4">
+                      자금대출
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 margin_top_s">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="" 
+                            onchange="formtype('form5'); estimateSlideTo(18)">
+                    <label class="form-check-label font_size_l" for="exampleRadios5">
+                      의료장비
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 margin_top_s">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="" 
+                            onchange="formtype('form6'); estimateSlideTo(20)">
+                    <label class="form-check-label font_size_l" for="exampleRadios6">
+                      의료소모품, 세무사 및 기타
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+  
+      <form id = "form1" name = "form1" method = "POST" action = "form/form1.php">
+      <section>
+
+        <input type = "hidden" name = "u_id" value = "<?=$u_id?>"/>
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+  
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">2 ></span>인테리어 받을 곳의 주소를 알려주세요.<div class="circle"></div>
+                </div>
+                <div class="col-12 font_size_l margin_top_m">(시/군/구/지/동 정확히 입력해주세요)</div>
+                <div class="col-12 margin_top_l">
+                  <input type="text" class="input_02 form-control" id = "f1_address" name = "f1_address" placeholder="주소를 입력해주세요" onfocus="this.style.opacity = 1"/>
+                </div>
+                <div class="col-4 col-sm-3 margin_top_l">
+                  <div class="button" style="height: 33px;font-size: 18px;" onclick="estimateSlideTo(3)">다음 ❯</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+  
+      </section>
+
+
+      <section>
+
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">3 ></span>공사 면적을 알려주세요.<div class="circle"></div>
+                </div>
+                <div class="col-12 font_size_l margin_top_m">(평수/층수 모두 작성해주세요)</div>
+                <div class="col-12 margin_top_l">
+                  <input type="text" class="input_02 form-control" id = "f1_det" name = "f1_det" placeholder="공사 면적을 알려주세요." onfocus="this.style.opacity = 1"/>
+                </div>
+                <div class="col-4 col-sm-3 margin_top_l">
+                  <div class="button" style="height: 33px;font-size: 18px;" onclick="estimateSlideTo(4)">다음 ❯</div>
+                </div>
+              </div>
+            </div>  
+          
+          </div>
+        </div>
+
+      </section>
+
+
+      <section>
+
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">4 ></span>공사 예산을 알려주세요.<div class="circle"></div>
+                </div>
+                
+                <div class="col-12 margin_top_l">
+                  <input type="text" class="input_02 form-control" id = "f1_budget" name = "f1_budget" placeholder="공사 예산을 알려주세요." onfocus="this.style.opacity = 1"/>
+                </div>
+                <div class="col-4 col-sm-3 margin_top_l">
+                  <div class="button" style="height: 33px;font-size: 18px;" onclick="estimateSlideTo(5)">다음 ❯</div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+
+      </section>
+  
+
+      <section>
+
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">5 ></span>원하시는 컨셉을 알려주세요.<div class="circle"></div>
+                </div>
+                <div class="col-12 font_size_l margin_top_m">(고급 프리미엄/저가 등)</div>
+                <div class="col-12 margin_top_l">
+                  <input type="text" class="input_02 form-control" id = "f1_concept" name = "f1_concept" placeholder="컨셉을 말씀해주세요." onfocus="this.style.opacity = 1"/>
+                </div>
+                <div class="col-4 col-sm-3 margin_top_l">
+                  <div class="button" style="height: 33px;font-size: 18px;" onclick="estimateSlideTo(6)">다음 ❯</div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+            
+      </section>
+
+
+      <section id>
+
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">6 ></span>시공 예정일을 알려주세요.<div class="circle"></div>
+                </div>
+                <div class="col-12 margin_top_l">
+                  <input type="text" class="input_02 form-control" id = "f1_date" name = "f1_date" placeholder="년/월/일" onfocus="this.style.opacity = 1"/>
+                </div>
+                <div class="col-4 col-sm-3 margin_top_l">
+                  <div class="button" style="height: 33px;font-size: 18px;" onclick="estimateSlideTo(7)">다음 ❯</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        
+      </section>
+
+
+      <section id>
+        <div class="container">
+          <div class="row align-items-center" style="height: 100vh;">
+            
+            <div class="container">
+              <div class="row">
+                <div class="col-12 font_size_ll font_weight_b">
+                  <span class="color_b margin_right_m">7 ></span>희망 사항을 알려주세요.
+                </div>
+                <div class="col-12 margin_top_l">
+                  <input type="text" class="input_02 form-control" id = "f1_extra" name = "f1_extra" placeholder="희망 사항을 알려주세요." onfocus="this.style.opacity = 1"/>
+                </div>
+                <div class="col-4 col-sm-3 margin_top_l">
+                  <div class="button" style="height: 33px;font-size: 18px;" ><input type = "submit" value="제출하기" style="border: none; background-color:transparent; color:#FFFFFF" onclick="return submit1()"/></button>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </section>
+      </form>
+
+
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="../lib/jquery.onepage-scroll.min.js"></script>
+    <script src="../script/common.js"></script>
+    <script src="../script/service.js"></script>
+  </body>
+</html>
