@@ -73,6 +73,23 @@
             opacity: 0;
         }
         }
+        .more_info {
+        
+          position: relative;
+        }
+
+        .more_info .title {
+            position: absolute;
+            top: 30px;
+            background: #000000;
+            left: -50px;
+            font-weight:bold;
+            color:#ffffff;
+            white-space: nowrap;
+            font-size:8px;
+            z-index:1;
+        }
+
     </style>
 
   </head>
@@ -112,7 +129,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-12 font_size_ll font_weight_b">
-                  <span class="color_b margin_right_m">1 ></span><span style="cursor:help" title="자신의 얼굴 기타 사회통념상 특정인임을 식별할 수 있는 신체적 특징에 관하여 함부로 촬영 또는 그림묘사 되거나 공표되지 않으며 영리적으로 이용당하지 않을 권리"><u>초상권</u></span> : 타인의 얼굴, 목소리 등이 출연하나요?
+                  <span class="color_b margin_right_m">1 ></span><span  style="cursor:help; color:#2b2b2b" class="more_info" title = "자신의 얼굴 기타 사회통념상 특정인임을 식별할 수 있는 신체적 특징에 관하여 함부로 촬영 또는 그림묘사 되거나 <br/>공표되지 않으며 영리적으로 이용당하지 않을 권리"><u>초상권</u></span> : 타인의 얼굴, 목소리 등이 출연하나요?
                 </div>
 
                 <div class="row margin_top_m margin_left_l">
@@ -127,7 +144,7 @@
                     <div class="col-12 margin_top_l">
                         <input class="form-check-input" type="radio" name="question1" id="exampleRadios2" value="타인이 출연하지만 동의를 구했다">
                         <label class="form-check-label font_size_l" for="exampleRadios2">
-                            타인이 출연하지만 <span style="cursor:help" title="타인의 출연에 대해 동의에 관한 경우, 이는 명시적 동의뿐만 아니라 암묵적 동의까지도 포함한다."><u>동의</u></span>를 구했다
+                            타인이 출연하지만 <span style="cursor:help" class="more_info" title = "타인의 출연에 대해 동의에 관한 경우, 이는 명시적 동의뿐만 아니라 암묵적 동의까지도 포함한다."><u>동의</u></span>를 구했다
                         </label>
                     </div>
                     
@@ -154,7 +171,9 @@
               <div class="row">
                 <div class="col-12 font_size_ll font_weight_b">
                   <span class="color_b margin_right_m">2 ></span>
-                  <span style="cursor:help" title="상표권자는 지정상품에 관하여 그 등록상표를 사용할 권리를 독점한다. 다만, 그 상표권에 관하여 전용사용권을 설정한 때에는 전용사용권자가 등록상표를 사용할 권리를 독점하는 범위에서는 그러하지 아니하다(제95조제3항).  (상표법 제 89조) 즉, 상표권자와 더불어 전용사용권자 역시 지정상품에 관한 등록 상표를 사용할 권리를 독점할 수 있다."><u>상표권</u></span>1 : 타인의 얼굴, 목소리 등이 출연하나요?
+                  <span style="cursor:help" class="more_info" title = "상표권자는 지정상품에 관하여 그 등록상표를 사용할 권리를 독점한다. <br/>
+                  다만, 그 상표권에 관하여 전용사용권을 설정한 때에는 전용사용권자가 등록상표를 사용할 권리를 독점하는 범위에서는 그러하지 아니하다.  
+                  <br/>(제95조제3항)(상표법 제 89조) 즉, 상표권자와 더불어 전용사용권자 역시 지정상품에 관한 등록 상표를 사용할 권리를 독점할 수 있다"><u>상표권</u></span>1 : 타인의 얼굴, 목소리 등이 출연하나요?
                 </div>
                 <div class="row margin_top_m margin_left_l">
                 <div class="col-12 margin_top_l">
@@ -175,16 +194,22 @@
                 <div class="col-12 margin_top_l">
                     <input class="form-check-input" type="radio" name="question2" id="exampleRadios5" value="노출되지만, 상표적 사용에 해당되지 않는 사용이다">
                     <label class="form-check-label font_size_l" for="exampleRadios5">
-                        노출되지만, <span style="cursor:help" title="상표적 사용에 해당되지 않는 사용: 
-① 상대방의 상표가 제품에 관한 설명이나 규격의 표시, 적용 제품 등으로 사용된 경우 
+                        노출되지만, <span style="cursor:help" class="more_info" title = "상표적 사용에 해당되지 않는 사용:
+
+<br/>① 상대방의 상표가 제품에 관한 설명이나 규격의 표시, 적용 제품 등으로 사용된 경우 
 ② 디자인적으로 사용된 경우
-③ 서적이나 음반의 제목으로 사용한 경우
+<br/>③ 서적이나 음반의 제목으로 사용한 경우
 ④ 비교 광고로서 광고 문구에 타인의 상표가 표시된 경우
-⑤ 상표가 다른 상품의 출처 표시로 인정된 경우
+<br/>⑤ 상표가 다른 상품의 출처 표시로 인정된 경우
 "><u>상표적 사용에 해당되지 않는 사용</u></span>이다
                     </label>
                 </div>
 
+                
+                
+                
+                
+                
                 <div class="col-4 col-sm-3 margin_top_l">
                   <div class="button" style="height: 33px;font-size: 18px;" onclick="estimateSlideTo(4)">다음 ❯</div>
                 </div>
@@ -207,7 +232,9 @@
               <div class="row">
                 <div class="col-12 font_size_ll font_weight_b">
                   <span class="color_b margin_right_m">3 ></span>
-                  <span style="cursor:help" title="상표권자는 지정상품에 관하여 그 등록상표를 사용할 권리를 독점한다. 다만, 그 상표권에 관하여 전용사용권을 설정한 때에는 전용사용권자가 등록상표를 사용할 권리를 독점하는 범위에서는 그러하지 아니하다(제95조제3항).  (상표법 제 89조) 즉, 상표권자와 더불어 전용사용권자 역시 지정상품에 관한 등록 상표를 사용할 권리를 독점할 수 있다."><u>상표권</u></span>2 :  상표출원한 타 유튜버의 영상이나 컨텐츠, 로고를 무단으로 사용했나요?
+                  <span style="cursor:help" class="more_info" title = "상표권자는 지정상품에 관하여 그 등록상표를 사용할 권리를 독점한다. <br/>
+                  다만, 그 상표권에 관하여 전용사용권을 설정한 때에는 전용사용권자가 등록상표를 사용할 권리를 독점하는 범위에서는 그러하지 아니하다.  
+                  <br/>(제95조제3항)(상표법 제 89조) 즉, 상표권자와 더불어 전용사용권자 역시 지정상품에 관한 등록 상표를 사용할 권리를 독점할 수 있다."><u>상표권</u></span>2 :  상표출원한 타 유튜버의 영상이나 컨텐츠, 로고를 무단으로 사용했나요?
                 </div>
                 <div class="row margin_top_m margin_left_l">
                 <div class="col-12 margin_top_l">
@@ -249,14 +276,18 @@
               <div class="row">
                 <div class="col-12 font_size_ll font_weight_b">
                   <span class="color_b margin_right_m">4 ></span>
-                  <span style="cursor:help" title=" “인간의 사상 또는 감정을 표현한 창작물인 저작물에 대한 배타적·독점적 권리”로 저작자는 저작인격권과 저작재산권을 가진다.
+                  <span style="cursor:help" class="more_info" title = " “인간의 사상 또는 감정을 표현한 창작물인 저작물에 대한 배타적·독점적 권리”로 저작자는 저작인격권과 저작재산권을 가진다.
 
-저작인격권: 저작물의 공표여부를 결정할 권리, 저작물의 원작품이나 복제물 또는 저작물의 공표에 있어서 실명 또는 이명을 표시할 권리, 저작물의 내용·형식 및 제호의 동일성을 유지할 권리. 
+<br/>저작인격권: 저작물의 공표여부를 결정할 권리, 저작물의 원작품이나 복제물 또는 저작물의 공표에 있어서 실명 또는 이명을 표시할 권리, <br/>저작물의 내용·형식 및 제호의 동일성을 유지할 권리. 
 
-저작재산권: 저작물을 복제·공연·공중송신·전시·배포·대여하고, 2차적 저작물을 작성하여 이용할 권리. 저작물을 복제·배포할 권리를 가진 자는 그 저작물을 출판할 권리를 설정할 수 있으며, 이러한 출판권을 설정받은 자가 그 범위 하에서 저작물을 원작 그대로 출판할 권리를 말함
-"><u>저작권</u></span>1 : 배경음악이 사용되었나요?
+<br/>저작재산권: 저작물을 복제·공연·공중송신·전시·배포·대여하고, 2차적 저작물을 작성하여 이용할 권리. 
+<br/>저작물을 복제·배포할 권리를 가진 자는 그 저작물을 출판할 권리를 설정할 수 있으며, 
+이러한 출판권을 설정받은 자가 그 범위 하에서 저작물을 <br/>원작 그대로 출판할 권리를 말함"><u>저작권</u></span>1 : 배경음악이 사용되었나요?
                 </div>
-                <div class="row margin_top_m margin_left_l">
+                <div class="row margin_top_l margin_left_l">
+                
+                
+
                 <div class="col-12 margin_top_l">
 
                     <input class="form-check-input" type="radio" name="question4" id="exampleRadios8" value="음악이 사용되지 않았다">
@@ -304,11 +335,13 @@
               <div class="row">
                 <div class="col-12 font_size_ll font_weight_b">
                   <span class="color_b margin_right_m">5 ></span>
-                  <span style="cursor:help" title=" “인간의 사상 또는 감정을 표현한 창작물인 저작물에 대한 배타적·독점적 권리”로 저작자는 저작인격권과 저작재산권을 가진다.
+                  <span style="cursor:help" class="more_info" title = " “인간의 사상 또는 감정을 표현한 창작물인 저작물에 대한 배타적·독점적 권리”로 저작자는 저작인격권과 저작재산권을 가진다.
 
-저작인격권: 저작물의 공표여부를 결정할 권리, 저작물의 원작품이나 복제물 또는 저작물의 공표에 있어서 실명 또는 이명을 표시할 권리, 저작물의 내용·형식 및 제호의 동일성을 유지할 권리. 
+<br/>저작인격권: 저작물의 공표여부를 결정할 권리, 저작물의 원작품이나 복제물 또는 저작물의 공표에 있어서 실명 또는 이명을 표시할 권리, <br/>저작물의 내용·형식 및 제호의 동일성을 유지할 권리. 
 
-저작재산권: 저작물을 복제·공연·공중송신·전시·배포·대여하고, 2차적 저작물을 작성하여 이용할 권리. 저작물을 복제·배포할 권리를 가진 자는 그 저작물을 출판할 권리를 설정할 수 있으며, 이러한 출판권을 설정받은 자가 그 범위 하에서 저작물을 원작 그대로 출판할 권리를 말함
+<br/>저작재산권: 저작물을 복제·공연·공중송신·전시·배포·대여하고, 2차적 저작물을 작성하여 이용할 권리. 
+<br/>저작물을 복제·배포할 권리를 가진 자는 그 저작물을 출판할 권리를 설정할 수 있으며, 
+이러한 출판권을 설정받은 자가 그 범위 하에서 저작물을 <br/>원작 그대로 출판할 권리를 말함
 "><u>저작권</u></span>2 : 사진이 사용되었나요?
                 </div>
                 <div class="row margin_top_m margin_left_l">
@@ -366,11 +399,13 @@
               <div class="row">
                 <div class="col-12 font_size_ll font_weight_b">
                   <span class="color_b margin_right_m">6 ></span>
-                  <span style="cursor:help" title=" “인간의 사상 또는 감정을 표현한 창작물인 저작물에 대한 배타적·독점적 권리”로 저작자는 저작인격권과 저작재산권을 가진다.
+                  <span style="cursor:help" class="more_info" title = " “인간의 사상 또는 감정을 표현한 창작물인 저작물에 대한 배타적·독점적 권리”로 저작자는 저작인격권과 저작재산권을 가진다.
 
-저작인격권: 저작물의 공표여부를 결정할 권리, 저작물의 원작품이나 복제물 또는 저작물의 공표에 있어서 실명 또는 이명을 표시할 권리, 저작물의 내용·형식 및 제호의 동일성을 유지할 권리. 
+<br/>저작인격권: 저작물의 공표여부를 결정할 권리, 저작물의 원작품이나 복제물 또는 저작물의 공표에 있어서 실명 또는 이명을 표시할 권리, <br/>저작물의 내용·형식 및 제호의 동일성을 유지할 권리. 
 
-저작재산권: 저작물을 복제·공연·공중송신·전시·배포·대여하고, 2차적 저작물을 작성하여 이용할 권리. 저작물을 복제·배포할 권리를 가진 자는 그 저작물을 출판할 권리를 설정할 수 있으며, 이러한 출판권을 설정받은 자가 그 범위 하에서 저작물을 원작 그대로 출판할 권리를 말함
+<br/>저작재산권: 저작물을 복제·공연·공중송신·전시·배포·대여하고, 2차적 저작물을 작성하여 이용할 권리. 
+<br/>저작물을 복제·배포할 권리를 가진 자는 그 저작물을 출판할 권리를 설정할 수 있으며, 
+이러한 출판권을 설정받은 자가 그 범위 하에서 <br/>저작물을 원작 그대로 출판할 권리를 말함
 "><u>저작권</u></span>3 : 방송 및 영화의 전체 영상 혹은 영상의 부분이 사용되나요?
                 </div>
                 <div class="row margin_top_m margin_left_l">
@@ -435,5 +470,15 @@
     <script src="../lib/jquery.onepage-scroll.min.js"></script>
     <script src="../script/common.js"></script>
     <script src="../script/service.js"></script>
+    <script>
+      $(".more_info").click(function () {
+         var $title = $(this).find(".title");
+         if (!$title.length) {
+           $(this).append('<span class="title">' + $(this).attr("title") + '</span>');
+         } else {
+            $title.remove();
+        }
+      });
+  </script>
   </body>
 </html>
