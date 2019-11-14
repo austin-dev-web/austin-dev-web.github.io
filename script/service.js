@@ -13,124 +13,71 @@ function submitEstimate() {
   estimateSlideTo(inValid[0] + 1)
 }
 
-function submit1() {
-  var invalid = new Array();
-  var form1 = $('#form1')
-  var sections = form1.find('section');
-  if ($('#f1_address').val() == '') {
-    invalid.push(0);
+
+var googleSubmitBtn = $('#google-submit');
+var snackbar = $('#snackbar');
+
+// var inputName = $('#name');
+// var inputAge = $('#age');
+// var inputArea = $('#area');
+
+var input1 = $('input[name="question1"]:checked').val();
+var input2 = $('input[name="question2"]:checked').val();
+var input3 = $('input[name="question3"]:checked').val();
+var input4 = $('input[name="question4"]:checked').val();
+var input5 = $('input[name="question5"]:checked').val();
+var input6 = $('input[name="question6"]:checked').val();
+var inputs = $('input[type=radio]');
+
+function isLoading(status) {
+  if (status) {
+    $('html, body').addClass('wait');
+    googleSubmitBtn.attr('disabled', true).html('입력중...');
+  } else {
+    $('html, body').removeClass('wait');
+    googleSubmitBtn.attr('disabled', false).html('입력완료');
   }
-  if ($('#f1_det').val() == '') {
-    invalid.push(1);
-  }
-  if ($('#f1_budget').val() == '') {
-    invalid.push(2);
-  }
-  if ($('#f1_concept').val() == '') {
-    invalid.push(3);
-  }
-  if ($('#f1_date').val() == '') {
-    invalid.push(4);
-  }
-  $.each(invalid, function (index, inval) {
-    sections.eq(inval).find('input').addClass('is-invalid')
-  })
-  estimateSlideTo(invalid[0] + 2)
-  if (invalid.length == 0) return true;
-  else return false;
 }
 
-function submit2() {
-  var invalid = new Array();
-  var form2 = $('#form2')
-  var sections = form2.find('section');
-  if ($('#f2_date').val() == '') {
-    invalid.push(0);
-  }
-  if ($('#f2_money').val() == '') {
-    invalid.push(1);
-  }
-  if ($('#f2_type').val() == '') {
-    invalid.push(2);
-  }
-  $.each(invalid, function (index, inval) {
-    sections.eq(inval).find('input').addClass('is-invalid')
-  })
-  estimateSlideTo(invalid[0] + 8)
-  if (invalid.length == 0) return true;
-  else return false;
-}
 
-function submit3() {
-  var invalid = new Array();
-  var form3 = $('#form3')
-  var sections = form3.find('section');
-  if ($('#f3_concept').val() == '') {
-    invalid.push(0);
-  }
+$('#google-submit').click(function () {
 
-  $.each(invalid, function (index, inval) {
-    sections.eq(inval).find('input').addClass('is-invalid')
-  })
-  estimateSlideTo(invalid[0] + 12)
-  if (invalid.length == 0) return true;
-  else return false;
-}
+  var input1 = $('input[name="question1"]:checked').val();
+  var input2 = $('input[name="question2"]:checked').val();
+  var input3 = $('input[name="question3"]:checked').val();
+  var input4 = $('input[name="question4"]:checked').val();
+  var input5 = $('input[name="question5"]:checked').val();
+  var input6 = $('input[name="question6"]:checked').val();
+  var inputs = $('input[type=radio]');
 
-function submit4() {
-  var invalid = new Array();
-  var form4 = $('#form4')
-  var sections = form4.find('section');
-  if ($('#f4_type').val() == '') {
-    invalid.push(0);
-  }
-  if ($('#f4_year').val() == '') {
-    invalid.push(1);
-  }
-  if ($('#f4_date').val() == '') {
-    invalid.push(2);
-  }
-  $.each(invalid, function (index, inval) {
-    sections.eq(inval).find('input').addClass('is-invalid')
-  })
-  estimateSlideTo(invalid[0] + 14)
-  if (invalid.length == 0) return true;
-  else return false;
-}
+  // 입력중..
+  isLoading(true);
+  // alert(input1);
+  $.ajax({
+    type: "GET",
+    url: "https://script.google.com/macros/s/AKfycbzPu3NwdDHmabXSo3Ey4Pf7cODV_9mdV6kb3ybRuRsr3zMXUI4/exec",
+    data: {
+      "초상권": input1,
+      "상표권1": input2,
+      "상표권2": input3,
+      "저작권1": input4,
+      "저작권2": input5,
+      "저작권3": input6
+    },
+    success: function (response) {
+      isLoading(false);
 
-function submit5() {
-  var invalid = new Array();
-  var form5 = $('#form5')
-  var sections = form5.find('section');
-  if ($('#f5_all').val() == '') {
-    invalid.push(0);
-  }
 
-  $.each(invalid, function (index, inval) {
-    sections.eq(inval).find('input').addClass('is-invalid')
-  })
-  estimateSlideTo(invalid[0] + 18)
-  if (invalid.length == 0) return true;
-  else return false;
-}
 
-function submit6() {
-  var invalid = new Array();
-  var form6 = $('#form6')
-  var sections = form6.find('section');
-  if ($('#f6_type').val() == '') {
-    invalid.push(0);
-  }
-  if ($('#f6_detail').val() == '') {
-    invalid.push(1);
-  }
-  $.each(invalid, function (index, inval) {
-    sections.eq(inval).find('input').addClass('is-invalid')
-  })
-  estimateSlideTo(invalid[0] + 20)
-  if (invalid.length == 0) return true;
-  else return false;
-}
+
+    },
+    error: function (request, status, error) {
+      isLoading(false);
+      console.log("code:" + request.status + "\n" + "error:" + error);
+      console.log(request.responseText);
+    }
+  });
+});
 
 function estimateSlideTo(number) {
   if (number > 0 && number <= 23) {
@@ -153,56 +100,5 @@ $(document).ready(function () {
   })
 
 
-  $('#form1').hide();
-  $('#form2').hide();
-  $('#form3').hide();
-  $('#form4').hide();
-  $('#form5').hide();
-  $('#form6').hide();
-})
 
-function formtype(type) {
-  if (type === 'form1') {
-    $('#form1').show();
-    $('#form2').hide();
-    $('#form3').hide();
-    $('#form4').hide();
-    $('#form5').hide();
-    $('#form6').hide();
-  } else if (type === 'form2') {
-    $('#form1').hide();
-    $('#form2').show();
-    $('#form3').hide();
-    $('#form4').hide();
-    $('#form5').hide();
-    $('#form6').hide();
-  } else if (type === 'form3') {
-    $('#form1').hide();
-    $('#form2').hide();
-    $('#form3').show();
-    $('#form4').hide();
-    $('#form5').hide();
-    $('#form6').hide();
-  } else if (type === 'form4') {
-    $('#form1').hide();
-    $('#form2').hide();
-    $('#form3').hide();
-    $('#form4').show();
-    $('#form5').hide();
-    $('#form6').hide();
-  } else if (type === 'form5') {
-    $('#form1').hide();
-    $('#form2').hide();
-    $('#form3').hide();
-    $('#form4').hide();
-    $('#form5').show();
-    $('#form6').hide();
-  } else if (type === 'form6') {
-    $('#form1').hide();
-    $('#form2').hide();
-    $('#form3').hide();
-    $('#form4').hide();
-    $('#form5').hide();
-    $('#form6').show();
-  }
-}
+})
