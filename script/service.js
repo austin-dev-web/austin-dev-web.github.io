@@ -49,7 +49,10 @@ $('#google-submit').click(function () {
   var input5 = $('input[name="question5"]:checked').val();
   var input6 = $('input[name="question6"]:checked').val();
   var inputs = $('input[type=radio]');
-
+  if(!input1 || !input2 || !input3 || !input4 || !input5 || !input6){
+    alert('모든 항목을 입력하여주세요')
+  }
+  else{
   // 입력중..
   isLoading(true);
   // alert(input1);
@@ -77,6 +80,7 @@ $('#google-submit').click(function () {
       console.log(request.responseText);
     }
   });
+  }
 });
 
 function estimateSlideTo(number) {
